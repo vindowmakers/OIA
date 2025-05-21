@@ -1,0 +1,16 @@
+<html><body>
+<h1>Welcome to OIA Casket Co.</h1>
+<h2>Featured Caskets</h2>
+<ul>
+{% for casket in featured %}
+  <li>
+    <img src="{{ casket.image.url }}" width="200"/>
+    <h3>{{ casket.name }}</h3>
+    <p>${{ casket.price }}</p>
+    <p>{{ casket.description }}</p>
+    <a href="/add-to-cart/{{ casket.id }}/">Add to Cart</a>
+  </li>
+{% endfor %}
+</ul>
+<a href="/catalog/">See All</a> | <a href="/cart/">Cart</a>
+</body></html>

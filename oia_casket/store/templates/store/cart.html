@@ -1,0 +1,12 @@
+<html><body>
+<h1>Your Cart</h1>
+<ul>
+{% for item in items %}
+  <li>
+    {{ item.casket.name }} (x{{ item.qty }}) - ${{ item.casket.price|floatformat:2 }}
+  </li>
+{% endfor %}
+</ul>
+<p>Total: ${{ total|floatformat:2 }}</p>
+<a href="/checkout/">Checkout</a>
+</body></html>

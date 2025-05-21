@@ -1,0 +1,9 @@
+<html><body>
+<h1>Checkout</h1>
+<form method="POST">{% csrf_token %}
+  <p><input type="text" name="full_name" placeholder="Full Name" required></p>
+  <p><input type="email" name="email" placeholder="Email" required></p>
+  <p><textarea name="address" placeholder="Shipping Address" required></textarea></p>
+  <p><button type="submit">Place Order</button></p>
+</form>
+</body></html>
